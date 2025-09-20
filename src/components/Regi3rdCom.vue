@@ -3,11 +3,11 @@
   <div :class="css.regiBoxRap">
     <div style="width:38.5rem" :class="css.box">
       <p :class="css.boxTitle">3rd連絡先</p>
-      <div :class="css.boxCon">
-        <label for="email">
+      <div class="flex flex-col w-72 mt-10 space-y-4">
+        <label for="email" class="block">
           <input type="email" id="email" placeholder="E-Mail" maxlength="319" v-model="mail">
         </label>
-        <label for="phone">
+        <label for="phone" class="block">
           <input type="text" id="phone" placeholder="Phone" maxlength="30" v-model="phone">
         </label>
       </div>

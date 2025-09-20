@@ -12,17 +12,17 @@
       </div>
       <div :class="css.boxBtnCon">
         <button :class="css.boxBtnTransi" v-on:click="onPrevi4th">戻る</button>
-        <a href="/"><button :class="css.boxBtnTransi">Topへ戻る</button></a>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdsYbnckrfiFwhN2_Dz56bQGxp3eGJYfy9np8dp2nbTgu6aUQ/formResponse"
+          method="post" target="afterSend" v-on:submit="sending" class="inline">
+          <input type="hidden" name="entry.1883969767" :value="loca">
+          <input type="hidden" name="entry.688168184" :value="name">
+          <input type="hidden" name="entry.329353550" :value="kana">
+          <input type="hidden" name="entry.1383150647" :value="mail">
+          <input type="hidden" name="entry.1406772280" :value="phone">
+          <input type="submit" name="send" value="送信" :class="css.boxBtnTransi">
+        </form>
       </div>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdsYbnckrfiFwhN2_Dz56bQGxp3eGJYfy9np8dp2nbTgu6aUQ/formResponse"
-        method="post" class="mx-2" target="afterSend" v-on:submit="sending">
-        <input type="hidden" name="entry.1883969767" :value="loca">
-        <input type="hidden" name="entry.688168184" :value="name">
-        <input type="hidden" name="entry.329353550" :value="kana">
-        <input type="hidden" name="entry.1383150647" :value="mail">
-        <input type="hidden" name="entry.1406772280" :value="phone">
-        <input type="submit" name="send" value="送信" :class="css.boxBtnTransi">
-      </form>
+      <div class="mx-2 flex items-center justify-center h-10 mt-4"><a href="/">Topへ戻る</a></div>
     </div>
     <iframe name="afterSend" style="display: none"
       id="iFAfterSend" title="transFrame" v-on:load="load">

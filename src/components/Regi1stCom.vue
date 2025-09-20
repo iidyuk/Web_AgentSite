@@ -3,19 +3,20 @@
   <div :class="css.regiBoxRap">
     <div style="width:38.5rem" :class="css.box">
       <p :class="css.boxTitle">働く場所</p>
-      <div :class="css.boxCon">
-        <div>
-          <label for="dome">
+      <div class="flex justify-evenly w-72 mt-10">
+        <div class="flex flex-col">
+          <label for="dome" class="block mb-2">
             <input type="radio" id="dome" name="entryaaa" v-model="loca" value="domestic">日本企業で働く
           </label>
-          <label for="abroad">
+          <label for="abroad" class="block">
             <input type="radio" id="abroad" name="entryaaa" v-model="loca" value="abroad">海外企業で働く
           </label>
         </div>
       </div>
       <div :class="css.boxBtnCon">
         <!-- <router-link to="/"><p :class="css.boxBtnPre">Topへ戻る</p></router-link> -->
-        <a href="/"><button :class="css.boxBtnTransi">Topへ戻る</button></a>
+        <!-- <a href="/"><button :class="css.boxBtnTransi">Topへ戻る</button></a> -->
+        <p class="mx-2 flex items-center justify-center h-10"><a href="/">Topへ戻る</a></p>
         <button :class="css.boxBtnTransi" v-on:click="onNext1st">次へ</button>
       </div>
     </div>

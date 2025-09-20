@@ -3,12 +3,12 @@
   <div :class="css.regiBoxRap">
     <div style="width:38.5rem" :class="css.box">
       <p :class="css.boxTitle">お名前</p>
-      <div :class="css.boxCon">
-        <label for="name">
+      <div class="flex flex-col w-72 mt-10 space-y-4">
+        <label for="name" class="block">
           <input type="text" id="name" placeholder="ご氏名" maxlength="30"
             :class="css.boxConInputText" v-model="name" name="entryaaa">
         </label>
-        <label for="kana">
+        <label for="kana" class="block">
           <input type="text" id="kana" placeholder="よみ" maxlength="50"
             :class="css.boxConInputText" v-model="kana" name="entryaaa">
         </label>
