@@ -74,7 +74,7 @@ export default {
           id: '04', text: '入社決定', click: 4, value: 'radio04',
         },
         {
-          id: '05', text: '出国手続き 就業', click: 5, value: 'radio05',
+          id: '05', text: '出国手続き<br>就業', click: 5, value: 'radio05',
         },
       ],
     },
@@ -90,18 +90,28 @@ export default {
           title: '3.企業との面談', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-03.png',
         },
         {
-          title: '4.出国手続き', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-04.png',
+          title: '4.入社決定', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-04.png',
+        },
+        {
+          title: '5.就業', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-05a.png',
+        },
+      ],
+      abroad: [
+        {
+          title: '1.エントリー', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-01.png',
+        },
+        {
+          title: '2.サポートからの連絡', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-02b.png',
+        },
+        {
+          title: '3.企業との面談', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-03.png',
+        },
+        {
+          title: '4.入社決定', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-04.png',
         },
         {
           title: '5.出国・就業', text: '(Text)', tagClass: '', img: './assets/img/serviceflow-05a.png',
         },
-      ],
-      abroad: [
-        { title: '1.エントリー', text: '(Text)', tagClass: '' },
-        { title: '2.サポートからの連絡', text: '(Text)', tagClass: '' },
-        { title: '3.企業との面談', text: '(Text)', tagClass: '' },
-        { title: '4.出国手続き', text: '(Text)', tagClass: '' },
-        { title: '5.出国・就業', text: '(Text)', tagClass: '' },
       ],
     },
     workPattern: {

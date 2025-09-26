@@ -11,7 +11,7 @@
               <input v-bind:id="dome.id" type="radio" name="fruits"
                 v-bind:value="dome.value" v-on:click="toggleBtn(dome.click)"
                 v-model="checkedRadi"/>
-                {{ dome.text }}
+                <span v-html="dome.text"></span>
             </label>
           </div>
         </div>
@@ -24,7 +24,7 @@
               <input v-bind:id="a.id" type="radio" name="fruits"
                 v-bind:value="a.value" v-on:click="toggleBtn(a.click)"
                 v-model="checkedRadi" />
-                {{ a.text }}
+                <span v-html="a.text"></span>
             </label>
           </div>
         </div>
@@ -46,6 +46,7 @@
               :key="key" v-bind:class=descripA.tagClass>
               <dt>{{ descripA.title }}</dt>
               <dd>{{ descripA.text }}</dd>
+              <dd><img v-bind:src="descripA.img" alt=""></dd>
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -68,6 +69,12 @@ import text from '../assets/js/text';
 /* eslint-disable */ 
 export default {
   name: 'ServiceFChart',
+  props: {
+    workPattern: {
+      type: String,
+      default: 'domestic'
+    }
+  },
   components: {
     'el-carousel': Carousel,
     'el-carousel-item': CarouselItem,
@@ -92,7 +99,6 @@ export default {
       imagePath: "", // 初期の画像情報
       t: text,
       // ↓ slider のポジション設定
-      workPattern: 'domestic',
       test1: this.slidePosiCenter,
       test2: this.lidePosiRight,
       test3: this.lidePosiRight,
@@ -313,7 +319,8 @@ export default {
   outline: none;
 }
 
-.ServiceFlow_Chart_Main .IllustPoints-Domestic{
+.ServiceFlow_Chart_Main .IllustPoints-Domestic,
+.ServiceFlow_Chart_Main .IllustPoints-Abroad{
   margin: 0 24px;
 }
 /* .ServiceFlow_Chart_Main .IllustPics{
